@@ -1,5 +1,7 @@
 require 'test/unit/testsuite'
 require 'test/unit/ui/console/testrunner'
+require "coverage.so"
+Coverage.start
 require_relative 'tc_mytest'
 
 class TS_MyTests
@@ -11,4 +13,5 @@ class TS_MyTests
 end
 
 Test::Unit::UI::Console::TestRunner.run(TS_MyTests)
+p Coverage.result
 
